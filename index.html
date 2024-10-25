@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día de Muertos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Menú inicial con imagen de fondo desenfocada -->
+    <div class="header-container">
+        <header id="main-header">
+            <div class="logo">
+                <img src="img/logo.jpeg" alt="">
+            </div>
+            <h1>Día de Muertos</h1>
+            <nav id="main-menu">
+                <ul>
+                    <li><a href="#origen">Origen</a></li>
+                    <li><a href="#tradiciones">Tradiciones</a></li>
+                    <li><a href="#altares">Altares</a></li>
+                    <li><a href="#comida">Comida</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="background-image"></div> <!-- Imagen desenfocada -->
+    </div>
+
+    <!-- Contenido de la página -->
+    <section id="origen">
+        <h1>Origen del Día de Muertos</h1>
+        <img src="img/origen.jpg" alt="">
+        <p>Su origen se ubica en la armonía entre la celebración de los rituales religiosos católicos traídos por los españoles y la conmemoración del día de muertos que los indígenas realizaban desde los tiempos prehispánicos; los antiguos mexicas, mixtecas, texcocanos, zapotecas, tlaxcaltecas, totonacas y otros pueblos</p>
+    </section>
+
+    <section id="tradiciones">
+        <h1>Tradiciones</h1>
+        <img src="img/tradiciones.jpg" alt="">
+        <p>Cada año muchas familias colocan ofrendas y altares decorados con flores de cempasúchil, papel picado, calaveritas de azúcar, pan de muerto, mole o algún platillo que le gustaba a sus familiares a quien va dedicada la ofrenda, y al igual que en tiempos prehispánicos, se coloca incienso para aromatizar el lugar.</p>
+    </section>
+
+    <section id="altares">
+        <h1>Altares</h1>
+        <img src="img/altares.jpg" alt="">
+        <p>El altar de muertos​ es un elemento fundamental en el conjunto de tradiciones mexicanas del Día de Muertos, que consiste en instalar altares domésticos en honor de los muertos de la familia donde se ofrece como ofrenda alimentos, velas, flores y objetos de uso cotidiano del difunto
+            El camino de flores en un altar simboliza:
+
+- Belleza y Pureza: Representa la estética y la pureza de intenciones.
+- Ofrecimiento y Devoción: Un acto de respeto y entrega hacia lo sagrado.
+- Transición y Viaje: Sirve como guía espiritual hacia lo divino.
+- Recuerdo y Honor: Homenaje a los seres queridos fallecidos.
+- Naturaleza y Ciclo de Vida: Conexión con el ciclo natural de la vida.
+Los juguetes en un altar simbolizan:
+
+- Inocencia y Alegría: Representan la pureza y felicidad de la infancia.
+- Homenaje a Niños Fallecidos: Recuerdan a los pequeños que han partido, honrando su memoria.
+- Conexión con la Infancia: Evocan momentos felices y el espíritu juguetón.
+- Transición y Crecimiento: Reflejan el viaje de la vida desde la niñez hacia la adultez.
+- Ofrenda Espiritual: Crean un vínculo con los espíritus de los niños, brindando alegría a sus almas.
+
+Un plato con sal en un altar simboliza:
+
+- Pureza y Protección: La sal es vista como un elemento purificador que aleja las malas energías.
+- Sustento y Prosperidad: Representa la abundancia y el alimento necesario para la vida.
+- Memoria y Recuerdo: La sal simboliza las lágrimas y el dolor por la pérdida de seres queridos.
+- Eternidad: Se considera que la sal no se descompone, simbolizando la perdurabilidad de la memoria.
+
+Las flores en un altar simbolizan:
+
+- Vida y Belleza: Representan la vitalidad y la belleza de la vida.
+- Ofrecimiento: Actúan como ofrendas a los difuntos, honrando su memoria.
+- Transitoriedad: Reflejan la fragilidad de la vida, ya que son hermosas pero efímeras.
+- Esperanza y Renacimiento: Simbolizan la esperanza de un reencuentro y la continuidad de la vida después de la muerte.
+
+        </p>
+    </section>
+
+    <section id="comida">
+        <h1>Comida típica</h1>
+        <img src="img/comida.jpg" alt="">
+        <p>Todos tipo de mole, arroz, pozole, tamales, flautas y hasta sopas maruchan, pasteles, jericallas y en al centro el pan de muerto, todo rociado con café, tequila o mezcal, son algunas de las viandas del Día de Muertos.
+
+            Los platillos del altar de muertos evocan los gustos de los difuntos: una gastronomía aquilatada por la memoria. La ofrenda del Día de Muertos es el ejercicio colectivo del pasado para conectarnos con nuestros contemporáneos.</p>
+    </section>
+
+    <!-- JavaScript para hacer que el menú sea pegajoso -->
+    <script>
+        // Selecciona el encabezado
+        const header = document.getElementById("main-header");
+        const stickyOffset = header.offsetTop; // Obtiene la posición inicial del encabezado
+
+        // Función para añadir o remover la clase 'sticky'
+        function stickyMenu() {
+            if (window.pageYOffset > stickyOffset) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+
+        // Detectar cuando se hace scroll en la página
+        window.onscroll = function() {
+            stickyMenu();
+        };
+    </script>
+</body>
+</html>
